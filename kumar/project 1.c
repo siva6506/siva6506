@@ -1,16 +1,25 @@
-#include <stdio.h>  // This line includes the standard input-output library needed for printf
+#include <stdio.h>
 
-// main() is the entry point of every C program
 int main() {
-    // Print your name on the first line
-    printf("Name: CSECS\n");  
-    
-    // Print your age on the second line
-    printf("Age: 21\n");      
-    
-    // Print your country on the third line
-    printf("Country: India\n"); 
-    
-    // Return 0 to indicate successful program execution
-    return 0;                 
+    char name[50];   // to store the name
+    int age;         // to store the age
+    float salary;    // to store the salary
+
+    // Asking for user input
+    printf("Enter your name: ");
+    scanf("%s", name);   // %s for string
+
+    printf("Enter your age: ");
+    scanf("%d", &age);   // %d for integer
+
+    printf("Enter your salary: ");
+    scanf("%f", &salary); // %f for float
+
+    // Printing them back neatly
+    printf("\n--- User Details ---\n");
+    printf("Name   : %s\n", name);
+    printf("Age    : %d\n", age);
+    printf("Salary : %.2f\n", salary); // formatted to 2 decimal places
+
+    return 0;
 }
